@@ -1,12 +1,12 @@
 ## Conda Export Tool
 
-A simple tool that produces environment files for
-easily sharing a conda environment. This script uses the PyYAML package.
-Additionally, it was tested on Python 3.9 but I think it should work for
-any version that supports f-strings.
+A simple tool that produces environment files for easily sharing a conda environment. This script uses the PyYAML package.
+Additionally, it was tested on Python 3.9 but I think it should work for any version that supports f-strings.
+
+This project was originally hosted in this [repo](https://github.com/andresberejnoi/PublicNotebooks/tree/master/Conda%20Tools). I decided to open a separate repository after fixing the bug in this [issue](https://github.com/andresberejnoi/PublicNotebooks/issues/1).
 
 The three main issues I wanted to solve about the built-in
-conda env export tool are the following:
+`conda env export` tool are the following:
 
     - Not including pip installations when using flag `--from-history`
     - When using flag `--from-history`, package versions are often not
@@ -55,4 +55,11 @@ Credits:
 This script uses part of the gist you can find here:
 https://gist.github.com/gwerbin/dab3cf5f8db07611c6e0aeec177916d8
  
-particularly, I copied the `export_env` function.
+In particular, I copied the `export_env` function from the gist.
+
+
+## TODO's
+
+I want to use a newer implementation of the YAML standard so I will look into other packages. Or even better, completely remove the need for a yaml library. Since this script needs to be run inside a conda environment in order to get the information, it would be great if there were no extra libraries needed to be installed. This would prevent polluting the environment with unwanted libraries.
+
+Another option could be to write the functions in a way that the script can be run from any environment, even the base, and still extract dependency information from other environments. Then, one could just keep a separate conda environment just for extracting other environments' info.
