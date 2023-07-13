@@ -18,7 +18,7 @@ I want to be able to do the following:
 ```sh
 conda env export --from-history > environment.yml
 ```
-and have a file that contains stricly the packages I installed (but including
+and have a file that contains strictly the packages I installed (but including
 those with pip). Additionally, those packages should have the version number
 that was installed in the environment. This script solves that. 
 
