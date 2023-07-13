@@ -3,7 +3,7 @@
 A simple tool that produces environment files for easily sharing a conda environment. This script uses the PyYAML package.
 Additionally, it was tested on Python 3.9 but I think it should work for any version that supports f-strings.
 
-This project was originally hosted in this [repo](https://github.com/andresberejnoi/PublicNotebooks/tree/master/Conda%20Tools). I decided to open a separate repository after fixing the bug in this [issue](https://github.com/andresberejnoi/PublicNotebooks/issues/1).
+This project was originally hosted [here](https://github.com/andresberejnoi/PublicNotebooks/tree/master/Conda%20Tools). I decided to open a separate repository after fixing the bug in this [issue](https://github.com/andresberejnoi/PublicNotebooks/issues/1).
 
 The three main issues I wanted to solve about the built-in
 `conda env export` tool are the following:
@@ -51,7 +51,7 @@ conda env export --from-history > environment.yml
 ```
 but including pip packages as well as conda channel.
 
-Credits:
+## Credits:
 This script uses part of the gist you can find here:
 https://gist.github.com/gwerbin/dab3cf5f8db07611c6e0aeec177916d8
  
